@@ -12,7 +12,7 @@ $pass=SED::encryption($loginPassword);
 if($UserType=="Estudante"){
 	$key="BI";
 	$table="estudante";
-	$userN="graduado";
+	$userN="graduados";
 }
 
 
