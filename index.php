@@ -1,9 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt">
 <head>
-	<title>ola mundo</title>
+    <title>Inicio de Sessao</title>
+    <?php
+        $LinksRoute="./";
+        include './inc/links.php'; 
+    ?>
+    <link rel="stylesheet" href="css/login.css"/>
+    <script src="js/SendForm.js"></script>
 </head>
-<body>
-<h2> ola Mundo </h2>
+<body class="full-cover-background" style="background-image:url(assets/img/code.jpeg);">
+    <div class="form-container">
+        <p class="text-center" style="margin-top: 17px;">
+           <i class="zmdi zmdi-account-circle zmdi-hc-5x"></i>
+       </p>
+       <h3 class="text-center all-tittles" style="margin-bottom: 30px;">E-Graduados</h3>
+       <h4 class="text-center all-tittles" style="margin-bottom: 30px;">Digite os dados da sua conta</h4>
+       <form action="process/login.php" method="post" class="form_SRCB" data-type-form="login" autocomplete="off">
+            <div class="group-material-login">
+              <input type="text" class="material-login-control"  name="loginName" required="" maxlength="70">
+              <span class="highlight-login"></span>
+              <span class="bar-login"></span>
+              <label><i class="zmdi zmdi-account"></i> &nbsp; Nome</label>
+            </div><br>
+            <div class="group-material-login">
+              <input type="password" class="material-login-control" name="loginPassword" required="" maxlength="70">
+              <span class="highlight-login"></span>
+              <span class="bar-login"></span>
+              <label><i class="zmdi zmdi-lock"></i> &nbsp; Senha</label>
+            </div>
+            <div class="group-material">
+                <select class="material-control-login" name="UserType">
+                    <option value="" disabled="" selected="">Tipo de usuario</option>
+                    <option value="Admin">Administrador</option>
+                    <option value="Student">Estudante</option>
+                    <option value="Graduado">Graduado</option>
+                    
+                </select>
+            </div>
+            <button class="btn-login" type="submit">Entre no sistema &nbsp; <i class="zmdi zmdi-arrow-right"></i></button>
+        </form>
+    </div>  
+    <div class="msjFormSend hidden"></div>
 </body>
 </html>
