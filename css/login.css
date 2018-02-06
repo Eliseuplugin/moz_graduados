@@ -109,9 +109,21 @@ select.material-control-login{
 }
 select.material-control-login:hover{
     cursor: pointer;
+<<<<<<< HEAD
   }
     
     /*Botao Cadastra*/
+=======
+<<<<<<< HEAD
+  }
+    
+    /*Botao Cadastra*/
+=======
+}
+
+ /*Botao Cadastra*/
+>>>>>>> 7354fdd63ba1a1688b08fc4f2673f320e99d9598
+>>>>>>> 4fe6b29cb207b0a8701e79aa3012fd895cbb63fe
 .btn-cad{
     background-color: transparent;
     text-align: center;

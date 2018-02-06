@@ -1,11 +1,14 @@
+ <?php
+        session_start();
+        $LinksRoute="./";
+        include './inc/links.php'; 
+        
+    ?>
 <!DOCTYPE html>
 <html lang="pt">
 <head>
     <title>Inicio de Sessao</title>
-    <?php
-        $LinksRoute="./";
-        include './inc/links.php'; 
-    ?>
+
     <link rel="stylesheet" href="css/login.css"/>
     <script src="js/SendForm.js"></script>
 </head>
@@ -36,12 +39,13 @@
                     <option value="Student">Estudante</option>
                     <option value="Graduado">Graduado</option> 
                 </select>
-            </div>
+            </div> 
+            
             <button class="btn-login" type="submit">Entre no sistema &nbsp; <i class="zmdi zmdi-arrow-right"></i></button>
         </form>
 
         <form action="fun_cadastrar.php" method="post" class="form_SRCB" data-type-form="login" autocomplete="off">
-          <button class="btn-cad" type="submit" >Criar Conta &nbsp; <i class="zmdi zmdi-arrow-right"></i></button>
+         <button class="btn-cad" type="submit" >Criar Conta &nbsp; <i class="zmdi zmdi-arrow-right"></i></button>
         </form>
 
     </div>  

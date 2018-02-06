@@ -1,8 +1,11 @@
-<?php 
+
+<?php
 	session_start();
 	$usuariot = $_POST['loginName'];
-	$senha = $_POST['loginPassword'];
-	echo $usuariot.' - '.$senhat;
+	$senhat = $_POST['loginPassword'];
+	$tipot = $_POST['UserType'];
+
 	header("Location: tela_cadastro.php");
 
  ?>
+
