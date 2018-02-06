@@ -1,11 +1,14 @@
+ <?php
+        session_start();
+        $LinksRoute="./";
+        include './inc/links.php'; 
+        
+    ?>
 <!DOCTYPE html>
 <html lang="pt">
 <head>
     <title>Inicio de Sessao</title>
-    <?php
-        $LinksRoute="./";
-        include './inc/links.php'; 
-    ?>
+
     <link rel="stylesheet" href="css/login.css"/>
     <script src="js/SendForm.js"></script>
 </head>
