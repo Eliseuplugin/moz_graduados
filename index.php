@@ -41,7 +41,7 @@
         </form>
 
         <form action="fun_cadastrar.php" method="post" class="form_SRCB" data-type-form="login" autocomplete="off">
-          <button class="btn-cad" type="submit">Criar Conta &nbsp; <i class="zmdi zmdi-arrow-left"></i></button>
+          <button class="btn-cad" type="submit" >Criar Conta &nbsp; <i class="zmdi zmdi-arrow-right"></i></button>
         </form>
 
     </div>  
