@@ -21,7 +21,7 @@
 	 ?>
 	 <div class="content-page-container full-reset custom-scroll-containers">
 	 		<?php
-	 			include './inc/NavUserInfo.php'; 
+	 			include './inc/NavUsuarioInfo.php'; 
 	 			?>
 	 			<div class="container">
 	 				<div class="page-header">
