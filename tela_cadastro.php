@@ -6,7 +6,7 @@
         $LinksRoute="./";
         include './inc/links.php'; 
     ?>
-    <link rel="stylesheet" href="css/login.css"/>
+    <link rel="stylesheet" href="css/cadastro.css"/>
     <script src="js/SendForm.js"></script>
 </head>
 <body class="full-cover-background" style="background-image:url(assets/img/code.jpeg);">
@@ -15,8 +15,8 @@
            <i class="zmdi zmdi-account-circle zmdi-hc-5x"></i>
        </p>
        <h3 class="text-center all-tittles" style="margin-bottom: 30px;">E-Graduados</h3>
-       <h4 class="text-center all-tittles" style="margin-bottom: 30px;">Digite os dados da sua conta</h4>
-       <form action="process/login.php" method="post" class="form_SRCB" data-type-form="login" autocomplete="off">
+       <h4 class="text-center all-tittles" style="margin-bottom: 30px;">Digite os dados para criar a sua conta</h4>
+       <form action="process/fun_cadastrar.php ?>" method="post" class="form_SRCB" data-type-form="login" autocomplete="off">
             <div class="group-material-login">
               <input type="text" class="material-login-control"  name="loginName" required="" maxlength="70">
               <span class="highlight-login"></span>
@@ -24,22 +24,32 @@
               <label><i class="zmdi zmdi-account"></i> &nbsp; Nome</label>
             </div><br>
             <div class="group-material-login">
+              <input type="text" class="material-login-control"  name="loginName" required="" maxlength="70">
+              <span class="highlight-login"></span>
+              <span class="bar-login"></span>
+              <label><i class="zmdi zmdi-account"></i> &nbsp; Email</label>
+            </div>
+            <div class="group-material-login">
               <input type="password" class="material-login-control" name="loginPassword" required="" maxlength="70">
               <span class="highlight-login"></span>
               <span class="bar-login"></span>
               <label><i class="zmdi zmdi-lock"></i> &nbsp; Senha</label>
+            </div><br>
+            <div class="group-material-login">
+              <input type="password" class="material-login-control" name="loginPassword" required="" maxlength="70">
+              <span class="highlight-login"></span>
+              <span class="bar-login"></span>
+              <label><i class="zmdi zmdi-lock"></i> &nbsp; Repetir Senha</label>
             </div>
             <div class="group-material">
                 <select class="material-control-login" name="UserType">
                     <option value="" disabled="" selected="">Tipo de usuario</option>
-                    <option value="Admin">Administrador</option>
                     <option value="Student">Estudante</option>
                     <option value="Graduado">Graduado</option>
                     
                 </select>
             </div> 
             
-            <button class="btn-login" type="submit">Entre no sistema &nbsp; <i class="zmdi zmdi-arrow-right"></i></button>
         </form>
 
         <form action="fun_cadastrar.php" method="post" class="form_SRCB" data-type-form="login" autocomplete="off">
