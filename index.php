@@ -37,8 +37,7 @@
                     <option value="" disabled="" selected="">Tipo de usuario</option>
                     <option value="Admin">Administrador</option>
                     <option value="Student">Estudante</option>
-                    <option value="Graduado">Graduado</option>
-                    
+                    <option value="Graduado">Graduado</option> 
                 </select>
             </div> 
             
@@ -46,7 +45,11 @@
         </form>
 
         <form action="fun_cadastrar.php" method="post" class="form_SRCB" data-type-form="login" autocomplete="off">
+<<<<<<< HEAD
          <button class="btn-cad" type="submit" >Criar Conta &nbsp; <i class="zmdi zmdi-arrow-right"></i></button>
+=======
+          <button class="btn-cad" type="submit">Criar Conta &nbsp; <i class="zmdi zmdi-arrow-left"></i></button>
+>>>>>>> 7354fdd63ba1a1688b08fc4f2673f320e99d9598
         </form>
 
     </div>  
