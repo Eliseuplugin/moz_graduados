@@ -31,7 +31,7 @@ if($UserType=="Admin"){
 	$key="CodigoAdmin";
 	$userN="Administrador";
 	$consult="SELECT * FROM administrador WHERE  nome_usuario COLLATE latin1_bin='$loginName'AND senha COLLATE latin1_bin='$pass' AND Estado=Ativo'";
-	$urlLocation='<script type="text/javascript">window.location="home.php"; </scrpit>';
+	$urlLocation='<script type="text/javascript">window.location="inicio.php"; </scrpit>';
 }
 
 if($UserType!=""){
