@@ -34,8 +34,7 @@
                     <option value="" disabled="" selected="">Tipo de usuario</option>
                     <option value="Admin">Administrador</option>
                     <option value="Student">Estudante</option>
-                    <option value="Graduado">Graduado</option>
-                    
+                    <option value="Graduado">Graduado</option> 
                 </select>
             </div>
             <button class="btn-login" type="submit">Entre no sistema &nbsp; <i class="zmdi zmdi-arrow-right"></i></button>
