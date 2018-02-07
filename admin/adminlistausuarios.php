@@ -76,12 +76,77 @@
                         	echo '<div class="div-table-row">
                         	<div class="div-table-cell">'.$p.'</div>
                         	<div class="div-table-cell">'.$fila['Nome'].'</div>
-                        	<div class="div-table-cell">'.$fila['NomeUsuario'].'</div>'
-                        }
-	 			}
-	 		 ?>
+                        	<div class="div-table-cell">'.$fila['NomeUsuario'].'</div>
+                        	<div class="div-table-cell">'.$fila['E-mail'].'</div>
+                        	<div class="div-table-cell">'.$fila['Status'].'</div>';
+                        	if($fial['Status']=='Activo'){
+                        		$checkAdminLoan=executarSQL::consultar("SELECT * FROM emprestimo WHERE CodigoAdmin='".$fila['CodigoAdmin']."'");
+                        		echo '<form class="div-table-cell form_SRCB" action="../process/desativadoAdmin.php" method="post" data-type-form="updateAccountAdmin" > <input value="'.$fila["CodigoAdmin"].'" type="hidden" name="primaryKey">
+                        		<button type="submit" class="btn btn-primary tooltips-general" data-toggle="tooltip" data-placement="top" title="Conta ativa, pressione o botão para desativá-la"><i class="zmdi zmdi-swap"></i></button>
+                        		</form>
+                                    <div class="div-table-cell"><button class="btn btn-success btn-update" data-code="'.$fila['CodigoAdmin'].'" data-url="../process/SelectDataAdmin.php"><i class="zmdi zmdi-refresh"></i></button></div>';
+                                    if(mysql_num_rows($checkAdminLoan)>0){
+                                        echo '<div class="div-table-cell"><button disabled="disabled" class="btn btn-danger"><i class="zmdi zmdi-delete"></i></button></div>';
+                                        }else{
+                                        echo '<form class="div-table-cell form_SRCB" action="../process/DeleteAdmin.php" method="post" data-type-form="delete" >
+                                            <input value="'.$fila["CodigoAdmin"].'" type="hidden" name="primaryKey">
+                                            <button type="submit" class="btn btn-danger"><i class="zmdi zmdi-delete"></i></button>
+                                        </form>';
+                                        }
+                                }else{
+                                    echo '
+                                    <form class="div-table-cell form_SRCB" action="../process/ActivateAdmin.php" method="post" data-type-form="updateAccounAdmin" >
+                                        <input value="'.$fila["CodigoAdmin"].'" type="hidden" name="primaryKey">
+                                        <button type="submit" class="btn btn-info tooltips-general" data-toggle="tooltip" data-placement="top" title="Conta desativada, pressione o botão para ativá-la">
+                                        <i class="zmdi zmdi-swap"></i></button>
+                                    </form>
+                                    <div class="div-table-cell"><button class="btn btn-success btn-update" data-code="'.$fila['CodigoAdmin'].'" data-url="../process/SelectDataAdmin.php"><i class="zmdi zmdi-refresh"></i></button></div>
+                                    <div class="div-table-cell"><button disabled="disabled" class="btn btn-danger"><i class="zmdi zmdi-delete"></i></button></div>';
+                                    }
+                            echo '</div>'; 
+                        $p++;
+                        mysql_free_result($checkAdminLoan);
+                    }
+                    echo '</div>';
+                }else{
+                    echo '<br><br><br><h2 class="text-center all-tittles">Não há administradores registrados no sistema</h2><br><br><br>';
+                    }
+                mysql_free_result($checkAdmin);
+            ?>
+        </div>
+        <div class="msjFormSend"></div>
+        <div class="modal fade" id="ModalUpdate" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <form class="form_SRCB modal-content" action="../process/AtualizarAdmin.php" method="post" data-type-form="update"  autocomplete="off">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title text-center all-tittles">Atualizar dados do administrador</h4>
+            </div>
+            <div class="modal-body" id="ModalData"></div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                <button type="submit" class="btn btn-success"><i class="zmdi zmdi-refresh"></i> &nbsp;&nbsp; Guardar mudanças</button>
+              </div>
+               </form>
+          </div>
+        </div>
+        <div class="modal fade" tabindex="-1" role="dialog" id="ModalHelp">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title text-center all-tittles">Ajuda do sistema</h4>
+                </div>
+                <div class="modal-body">
+                    <?php include '../help/ajuda-adminlistausuario.php'; ?>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="zmdi zmdi-thumb-up"></i> &nbsp; De acordo</button>
+                </div>
+              </div>
+          </div>
+      </div>
+	 		 <?php include '../inc/footer.php';?>
 	 	</div>
-	 </div>
-
 </body>
 </html>
