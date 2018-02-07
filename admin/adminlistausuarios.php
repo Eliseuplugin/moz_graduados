@@ -59,7 +59,26 @@
 	 	<div class="container-fluid">
 	 		<h2 class="text-center all-tittles">Lista de administradores</h2>
 	 		<?php 
-	 			$checkAdmin=executarSQL::consultar("SELECT * FROM administrador WHERE Nome <> 'Super Administrador'")
+	 			$checkAdmin=executarSQL::consultar("SELECT * FROM administrador WHERE Nome <> 'Super Administrador'");
+	 			if(mysql_num_rows($checkAdmin)>0){
+	 				echo '<div class="div-table" id="List-Admin">
+	 				<div class="div-table-row div-table-head">
+                        <div class="div-table-cell">#</div>
+                        <div class="div-table-cell">Nome</div>
+                        <div class="div-table-cell">Nome do usuario</div>
+                        <div class="div-table-cell">E-mail</div>
+                        <div class="div-table-cell">Status</div>
+                        <div class="div-table-cell">Trocar</div>
+                        <div class="div-table-cell">Atualizar</div><div class="div-table-cell">Eliminar</div>
+                        </div>';
+                        $p=1;
+                        while ($fila=mysql_fetch_array($checkAdmin)) {
+                        	echo '<div class="div-table-row">
+                        	<div class="div-table-cell">'.$p.'</div>
+                        	<div class="div-table-cell">'.$fila['Nome'].'</div>
+                        	<div class="div-table-cell">'.$fila['NomeUsuario'].'</div>'
+                        }
+	 			}
 	 		 ?>
 	 	</div>
 	 </div>
