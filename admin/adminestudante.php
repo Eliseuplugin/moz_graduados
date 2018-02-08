@@ -68,11 +68,11 @@
         <div class="container-fluid">
             <div class="container-flat-form">
                 <div class="title-flat-form title-flat-blue">Registrar um novo estudante</div>
-                <form action="../process/AddStudent.php" method="post" class="form_SRCB" data-type-form="save" autocomplete="off">
+                <form action="../process/AddEstudante.php" method="post" class="form_SRCB" data-type-form="save" autocomplete="off">
                     <div class="row">
                        <div class="col-xs-12 col-sm-8 col-sm-offset-2">
                            <?php
-                                $checkTeacherSection=ejecutarSQL::consultar("SELECT * FROM docente");
+                                $checkTeacherSection=executarSQL::consultar("SELECT * FROM docente");
                                 if(mysql_num_rows($checkTeacherSection)<=0){
                                     echo '<br><div class="alert alert-danger text-center" role="alert"><strong><i class="zmdi zmdi-alert-triangle"></i> &nbsp; ¡Importante!:</strong> Você não pode registrar estudantes, você deve primeiro adicionar professores ao sistema</div>';
                                 }
@@ -104,9 +104,9 @@
                                         
                                         if(mysql_num_rows($checkTeacherSection)>0){
                                             while($fila=mysql_fetch_array($checkTeacherSection)){
-                                                $checkStudentSection=ejecutarSQL::consultar("select * from seccion where CodigoSeccion='".$fila['CodigoSeccion']."' order by Nombre");
+                                                $checkStudentSection=executarSQL::consultar("select * from secao where CodigoSecao='".$fila['CodigoSecao']."' order by Nome");
                                                 $row=mysql_fetch_array($checkStudentSection);
-                                                echo '<option value="'.$row['CodigoSeccion'].'">'.$row['Nombre'].'</option>';
+                                                echo '<option value="'.$row['CodigoSecao'].'">'.$row['Nome'].'</option>';
                                                 mysql_free_result($checkStudentSection);
                                             }
                                         }

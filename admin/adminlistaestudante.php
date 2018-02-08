@@ -46,7 +46,7 @@
       <div class="conteiner-fluid">
             <ul class="nav nav-tabs nav-justified"  style="font-size: 17px;">
               <li role="presentation"><a href="adminuser.php">Administradores</a></li>
-              <li role="presentation"  class="active"><a href="adminstudent.php">Estudantes</a></li>
+              <li role="presentation"  class="active"><a href="adminestudante.php">Estudantes</a></li>
               <li role="presentation"><a href="adminpersonal.php">Pessoal administrativo</a></li>
             </ul>
         </div>
@@ -72,7 +72,7 @@
             </div>
         </div>
         <div class="container-fluid" style="margin: 0 0 50px 0;">
-            <form class="pull-right" style="width: 30% !important;" action="adminliststudent.php" method="get" autocomplete="off">
+            <form class="pull-right" style="width: 30% !important;" action="adminlistestudante.php" method="get" autocomplete="off">
                 <div class="group-material">
                     <input type="search" style="display: inline-block !important; width: 70%;" class="material-control tooltips-general" placeholder="Buscar estudante" name="StudentN" required="" pattern="[a-zA-ZáéíóúÁÉÍÓÚ ]{1,50}" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escreva os nomes, sem os sobrenomes">
                     <button class="btn" style="margin: 0; height: 43px; background-color: transparent !important;">
@@ -83,16 +83,16 @@
             <h2 class="text-center all-tittles" style="margin: 25px 0; clear: both;">Seções</h2>
             <ul class="list-unstyled text-center list-catalog-container">
                 <?php
-                    $selectSections=ejecutarSQL::consultar("SELECT * FROM seccion ORDER BY Nombre ASC");
+                    $selectSections=ejecutarSQL::consultar("SELECT * FROM secao ORDER BY Nome ASC");
                     while($fila=mysql_fetch_array($selectSections)){
-                        echo '<li class="list-catalog" data-code-section="'.$fila['CodigoSeccion'].'">'.$fila['Nombre'].'</li>'; 
+                        echo '<li class="list-catalog" data-code-section="'.$fila['CodigoSecao'].'">'.$fila['Nome'].'</li>'; 
                     }
                     mysql_free_result($selectSections);
                 ?>
             </ul>
         </div>
         <div class="container-fluid">
-            <h2 class="text-center all-tittles">lista de estudantes</h2>
+            <h2 class="text-center all-tittles">Lista de estudantes</h2>
             <?php
                 if(!$StudentN=="" || !$StudentS==""){
                     echo '<div class="table-responsive">
