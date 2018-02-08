@@ -39,10 +39,10 @@
         </div>
         <div class="conteiner-fluid">
             <ul class="nav nav-tabs nav-justified"  style="font-size: 17px;">
-              <li role="presentation"><a href="adminuser.php">Administradores</a></li>
+              <li role="presentation"><a href="adminusuario.php">Administradores</a></li>
               <!-- <li role="presentation"><a href="adminteacher.php">Docentes</a></li> -->
-              <li role="presentation"  class="active"><a href="adminstudent.php">Estudantes</a></li>
-              <li role="presentation"><a href="adminpersonal.php">Pessoal administrativo</a></li>
+              <li role="presentation"  class="active"><a href="adminestudante.php">Estudantes</a></li>
+              <!-- <li role="presentation"><a href="adminpersonal.php">Pessoal administrativo</a></li> -->
             </ul>
         </div>
         <div class="container-fluid"  style="margin: 50px 0;">

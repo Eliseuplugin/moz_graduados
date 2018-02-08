@@ -29,7 +29,7 @@
             <ul class="nav nav-tabs nav-justified"  style="font-size: 17px;">
                 <li role="presentation"  class="active"><a href="adminusuario.php">Administradores</a></li>
                 <!-- <li role="presentation"><a href="adminteacher.php">Docentes</a></li> -->
-                <li role="presentation"><a href="adminstudent.php">Estudantes</a></li>
+                <li role="presentation"><a href="adminestudante.php">Estudantes</a></li>
                 <li role="presentation"><a href="adminpersonal.php">Pessoal administrativo</a></li>
             </ul>
         </div>
@@ -48,7 +48,7 @@
                 <div class="col-xs-12 lead">
                     <ol class="breadcrumb">
                       <li class="active">Novo administrador</li>
-                      <li><a href="adminlistuser.php">Lista de administradores</a></li>
+                      <li><a href="adminlistausuarios.php">Lista de administradores</a></li>
                     </ol>
                 </div>
             </div>
@@ -108,10 +108,10 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title text-center all-tittles">ajuda do sistema</h4>
+                    <h4 class="modal-title text-center all-tittles">Ajuda do sistema</h4>
                 </div>
                 <div class="modal-body">
-                    <?php include '../help/help-adminuser.php'; ?>
+                    <?php include '../ajuda/ajuda-adminusuario.php'; ?>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="zmdi zmdi-thumb-up"></i> &nbsp; De acordo</button>

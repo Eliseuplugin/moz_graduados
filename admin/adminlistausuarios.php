@@ -42,7 +42,7 @@
 	 				<img src="../assets/img/user01.png" alt="user" class="img-responsive cennter-box" style="max-width: 110px;">
 	 			</div>
 	 			<div class="col-xs-12 col-sm-8 col-md-8 text-justify lead">
-	 				Bem-vindo a sessao
+	 				Bem-vindo a sessao donde se encontra a lista dos administradores, podes desativar a conta ou administrador ou eliminar os dados 
 	 			</div>
 	 		</div>
 	 	</div>
@@ -125,7 +125,7 @@
             <div class="modal-body" id="ModalData"></div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                <button type="submit" class="btn btn-success"><i class="zmdi zmdi-refresh"></i> &nbsp;&nbsp; Guardar mudanças</button>
+                <button type="submit" class="btn btn-success"><i class="zmdi zmdi-refresh"></i> &nbsp;&nbsp; Guardar alteraçoes</button>
               </div>
                </form>
           </div>
